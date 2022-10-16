@@ -7,6 +7,7 @@ import { generateToken, isAdmin, isAuth } from '../utils.js';
 
 const userRouter = express.Router();
 
+//get all top sellers
 userRouter.get(
   '/top-sellers',
   expressAsyncHandler(async (req, res) => {
@@ -26,6 +27,7 @@ userRouter.get(
   })
 );
 
+//user signin route
 userRouter.post(
   '/signin',
   expressAsyncHandler(async (req, res) => {
