@@ -24,3 +24,4 @@ You can contribute in the following ways:
 - You are free to add more features
 - We will be adding more issues in `Issues` tab - so definitely check out those issues for contributions or if an issue already exists!
 - Additionally, if you find a bug, have new feature ideas or want to work on styling something, please submit an issue and we will take a look at it.
+- Kindly follow the issue guidelines/best practises while opening an issue.
