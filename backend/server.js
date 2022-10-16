@@ -11,10 +11,12 @@ import uploadRouter from './routers/uploadRouter.js';
 
 dotenv.config();
 
+//initializing express app
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+//connecting to mongodb
 mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/amazona');
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
@@ -36,6 +38,7 @@ app.get('*', (req, res) =>
 //   res.send('Server is ready');
 // });
 
+//error handling middleware
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
